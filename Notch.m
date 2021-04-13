@@ -84,7 +84,10 @@ Fd = F_mtc;         % Chosen method for c2d
 num = cell2mat(num);
 den = cell2mat(den);
 
+kpMult = num(1)/den(1);
+
 num = num/(num(1));
 den = den/(den(1));
+
 
 Fd = tf(num,den,Ts,'Variable','z^-1');
